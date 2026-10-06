@@ -1,36 +1,859 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Syed Kifayat Ullah | Software Developer & Biological Data Analyst</title>
-<meta name="description" content="MCA student and former teacher in Srinagar, India, combining software development with biological data analysis.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #131c18;
-    --panel: #1b2823;
-    --line: #2b3b34;
-    --sage: #a9b79a;
-    --text: #ece8dc;
-    --muted: #9aa69d;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
-  a { color: var(--sage); }
-  a:focus-visible, .btn:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  .wrap { max-width: 1050px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 320px 1fr; gap: 64px; }
+  <title>Syed Kifayat Ullah | Software Developer</title>
 
-  aside { position: sticky; top: 0; align-self: start; padding: 72px 0; }
-  h1 { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 2.7rem; line-height: 1.1; }
-  .roles { color: var(--sage); margin-top: 14px; font-size: 1.05rem; }
-  .place { color: var(--muted); margin-top: 6px; }
-  .contact { margin-top: 28px; display: grid; gap: 10px; }
-  .btn { display: inline-block; background: var(--sage); color: var(--bg); padding: 11px 22px; border-radius: 6px; text-decoration: none; font-weight: 700; width: fit-content; }
-  .btn.ghost { background: none; color: var(--sage); border: 1px solid var(--sage); }
-  .btn:hover { opacity: .85; }
-  nav { margin-top: 36px; display: grid; gap: 8
+  <meta name="description"
+        content="Portfolio of Syed Kifayat Ullah, an MCA graduate and software developer from Jammu & Kashmir with experience in programming, databases, teaching and data analysis.">
+
+  <meta name="author" content="Syed Kifayat Ullah">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #101814;
+      --bg-soft: #141f1a;
+      --panel: #1a2721;
+      --panel-hover: #203029;
+      --line: #2b3b34;
+
+      --sage: #b7c7a8;
+      --sage-dark: #899b82;
+
+      --text: #eeeade;
+      --muted: #9da9a1;
+
+      --white: #ffffff;
+
+      --max-width: 1180px;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 40px;
+    }
+
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(169,183,154,.07), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ::selection {
+      background: var(--sage);
+      color: var(--bg);
+    }
+
+    /* =========================
+       LAYOUT
+    ========================= */
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 70px;
+      padding: 70px 0 60px;
+    }
+
+    /* =========================
+       SIDEBAR
+    ========================= */
+
+    aside {
+      position: sticky;
+      top: 35px;
+      height: fit-content;
+    }
+
+    .eyebrow {
+      color: var(--sage);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    aside h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(42px, 5vw, 58px);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .roles {
+      color: var(--sage);
+      font-size: 17px;
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+
+    .place {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 42px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 46px;
+      padding: 10px 17px;
+      border: 1px solid var(--sage);
+      border-radius: 10px;
+      background: var(--sage);
+      color: var(--bg);
+      font-size: 14px;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--text);
+      border-color: var(--text);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--sage);
+    }
+
+    .btn.ghost:hover {
+      background: var(--panel);
+      color: var(--text);
+      border-color: var(--sage);
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      border-left: 1px solid var(--line);
+    }
+
+    nav a {
+      padding: 7px 0 7px 18px;
+      color: var(--muted);
+      font-size: 14px;
+      transition: .2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      padding-left: 23px;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      padding: 15px 0 75px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 65px;
+    }
+
+    section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      letter-spacing: -.5px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--sage);
+      margin: 0 12px 9px 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: #d4d6cc;
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .intro-note {
+      margin-top: 22px;
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 15px;
+    }
+
+    /* =========================
+       EDUCATION / EXPERIENCE
+    ========================= */
+
+    .item {
+      position: relative;
+      padding: 24px;
+      margin-bottom: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: .25s ease;
+    }
+
+    .item:hover {
+      background: var(--panel-hover);
+      transform: translateY(-2px);
+      border-color: #405249;
+    }
+
+    .item h3 {
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .sub {
+      color: var(--sage);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .item p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .date {
+      display: inline-block;
+      margin-top: 8px;
+      color: #7f8d84;
+      font-size: 12px;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .project {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 25px;
+      transition: .25s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      background: var(--panel-hover);
+      border-color: #405249;
+    }
+
+    .project-number {
+      color: var(--sage);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 15px;
+    }
+
+    .project h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 18px;
+    }
+
+    .project-tech span {
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--sage);
+      font-size: 11px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .group {
+      margin-bottom: 28px;
+    }
+
+    .group:last-child {
+      margin-bottom: 0;
+    }
+
+    .group h3 {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tags span {
+      padding: 8px 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: #c6cec7;
+      font-size: 13px;
+      transition: .2s ease;
+    }
+
+    .tags span:hover {
+      border-color: var(--sage);
+      color: var(--sage);
+    }
+
+    /* =========================
+       INTERESTS
+    ========================= */
+
+    .plain {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .plain li {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 15px 17px;
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .plain li::before {
+      content: "→";
+      color: var(--sage);
+      margin-right: 9px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 30px 0 45px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--sage);
+      font-weight: 600;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .wrap {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 45px;
+      }
+
+      aside {
+        position: relative;
+        top: 0;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        border-left: none;
+        border-top: 1px solid var(--line);
+        margin-top: 25px;
+        padding-top: 10px;
+      }
+
+      nav a {
+        padding: 7px 4px;
+        text-align: center;
+      }
+
+      nav a:hover {
+        padding-left: 4px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .wrap {
+        width: min(100% - 28px, 600px);
+        padding-top: 30px;
+      }
+
+      aside h1 {
+        font-size: 44px;
+      }
+
+      .roles {
+        font-size: 15px;
+      }
+
+      nav {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .projects,
+      .plain {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .lead {
+        font-size: 17px;
+      }
+
+      section {
+        padding-bottom: 50px;
+        margin-bottom: 45px;
+      }
+
+      footer {
+        width: min(100% - 28px, 600px);
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside>
+
+      <div class="eyebrow">Portfolio · 2026</div>
+
+      <h1>Syed<br>Kifayat<br>Ullah</h1>
+
+      <p class="roles">
+        Software Developer · Problem Solver · Data & Technology Enthusiast
+      </p>
+
+      <p class="place">
+        Srinagar, Jammu & Kashmir, India
+      </p>
+
+      <div class="contact">
+        <a class="btn" href="mailto:syedathar793@gmail.com">
+          Email Me
+        </a>
+
+        <a class="btn ghost"
+           href="https://github.com/syedkifayatullah"
+           target="_blank"
+           rel="noopener noreferrer">
+          View GitHub
+        </a>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+      </nav>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+      <!-- ABOUT -->
+
+      <section id="about">
+
+        <h2>About Me</h2>
+
+        <p class="lead">
+          I am a Master of Computer Applications (MCA) graduate with a
+          background in Biological Science. I combine programming,
+          database technologies, analytical thinking and communication
+          skills to build practical software solutions.
+        </p>
+
+        <p class="intro-note">
+          I enjoy solving problems, learning emerging technologies and
+          turning complex ideas and datasets into useful, understandable
+          solutions. My background in science and computer applications
+          gives me a multidisciplinary approach to technology and data.
+        </p>
+
+      </section>
+
+
+      <!-- EDUCATION -->
+
+      <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="item">
+
+          <h3>Master of Computer Applications (MCA)</h3>
+
+          <div class="sub">
+            Cluster University Srinagar
+          </div>
+
+          <p>
+            Computer Applications with focus on programming,
+            databases, software development, web technologies and
+            computer systems.
+          </p>
+
+        </div>
+
+
+        <div class="item">
+
+          <h3>Bachelor's in Bio-Science</h3>
+
+          <div class="sub">
+            University of Kashmir
+          </div>
+
+          <p>
+            Background in biological science with additional academic
+            exposure to Computer Applications and English.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- EXPERIENCE -->
+
+      <section id="experience">
+
+        <h2>Experience</h2>
+
+        <div class="item">
+
+          <h3>Science Teacher</h3>
+
+          <div class="sub">
+            Sir Syed Mission Institute · 2 Years
+          </div>
+
+          <p>
+            Teaching science to students, preparing lessons and
+            assessments, explaining complex concepts clearly and
+            developing engaging classroom activities. The role has
+            strengthened my communication, presentation, leadership
+            and problem-solving skills.
+          </p>
+
+        </div>
+
+
+        <div class="item">
+
+          <h3>PlanetSpark Teacher</h3>
+
+          <div class="sub">
+            Online Teaching
+          </div>
+
+          <p>
+            Completed PlanetSpark's classroom training and was
+            onboarded as a teacher. Developed experience in online
+            teaching, student engagement, communication and
+            structured lesson delivery.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- PROJECTS -->
+
+      <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+          <article class="project">
+
+            <div class="project-number">
+              PROJECT 01
+            </div>
+
+            <h3>Trainora</h3>
+
+            <p>
+              A Smart Learning Management System designed to provide
+              an organized platform for managing courses, learning
+              resources, users and academic activities.
+            </p>
+
+            <div class="project-tech">
+              <span>ASP.NET 8</span>
+              <span>C#</span>
+              <span>Entity Framework</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+              <span>SQL Server</span>
+            </div>
+
+          </article>
+
+
+          <article class="project">
+
+            <div class="project-number">
+              PROJECT 02
+            </div>
+
+            <h3>Data & Scientific Analysis</h3>
+
+            <p>
+              Applying computational and analytical approaches to
+              organize, clean and interpret scientific and biological
+              datasets while developing clear and useful insights.
+            </p>
+
+            <div class="project-tech">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Data Analysis</span>
+              <span>Research</span>
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- SKILLS -->
+
+      <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="group">
+
+          <h3>Programming</h3>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Java</span>
+            <span>C</span>
+            <span>C++</span>
+            <span>SQL</span>
+            <span>Database Design</span>
+          </div>
+
+        </div>
+
+
+        <div class="group">
+
+          <h3>Web Development</h3>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>ASP.NET</span>
+            <span>Bootstrap</span>
+            <span>Git</span>
+            <span>GitHub</span>
+          </div>
+
+        </div>
+
+
+        <div class="group">
+
+          <h3>Systems & Tools</h3>
+
+          <div class="tags">
+            <span>Windows</span>
+            <span>Linux</span>
+            <span>Computer Networks</span>
+            <span>MS Excel</span>
+            <span>MS Word</span>
+            <span>MS PowerPoint</span>
+            <span>Tally</span>
+          </div>
+
+        </div>
+
+
+        <div class="group">
+
+          <h3>Data & Technology</h3>
+
+          <div class="tags">
+            <span>Data Cleaning</span>
+            <span>Data Analysis</span>
+            <span>GIS</span>
+            <span>Remote Sensing</span>
+            <span>Research Methods</span>
+            <span>Technical Writing</span>
+            <span>AI Fundamentals</span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- INTERESTS -->
+
+      <section id="interests">
+
+        <h2>Interests</h2>
+
+        <ul class="plain">
+
+          <li>
+            Software development and problem solving
+          </li>
+
+          <li>
+            Artificial intelligence and emerging technologies
+          </li>
+
+          <li>
+            Data analysis and computational methods
+          </li>
+
+          <li>
+            Biological systems and computational modeling
+          </li>
+
+          <li>
+            Digital currency and blockchain technology
+          </li>
+
+          <li>
+            Drone technology and innovation
+          </li>
+
+        </ul>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      © 2026 <strong>Syed Kifayat Ullah</strong>
+    </span>
+
+    <span>
+      Built with HTML & CSS
+    </span>
+
+  </footer>
+
+
+</body>
+</html>
