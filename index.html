@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
 
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="vFAWQyBSn9FHAcLyCKiDJzlBCNTcKABD59W3dV3X-Bk" />
+
+    <!-- Basic SEO -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syed Kifayat Ullah | Software Developer</title>
 
     <meta name="description"
         content="Syed Kifayat Ullah - Software Developer, MCA Graduate, Data & Technology Enthusiast from Jammu & Kashmir.">
@@ -13,96 +19,64 @@
 
     <meta name="author" content="Syed Kifayat Ullah">
 
-    <meta name="theme-color" content="#07111f">
+    <meta name="robots" content="index, follow">
 
-    <title>Syed Kifayat Ullah | Software Developer</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Syed Kifayat Ullah | Software Developer">
+    <meta property="og:description"
+        content="MCA Graduate | Software Developer | Data & Technology Enthusiast">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://syedkifayatullah.github.io/">
+    <meta property="og:image" content="https://syedkifayatullah.github.io/photo.jpg">
 
-    <!-- Professional Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="photo.jpg">
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
+    <!-- Icons -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
 
-        /* =========================================================
-           ROOT VARIABLES
-        ========================================================= */
-
-        :root {
-            --bg: #07111f;
-            --bg-light: #0b1728;
-            --surface: rgba(255, 255, 255, 0.055);
-            --surface-hover: rgba(255, 255, 255, 0.085);
-
-            --text: #f8fafc;
-            --text-soft: #cbd5e1;
-            --text-muted: #94a3b8;
-
-            --blue: #4285f4;
-            --blue-light: #60a5fa;
-
-            --purple: #8b5cf6;
-            --cyan: #22d3ee;
-
-            --green: #34a853;
-            --yellow: #fbbc05;
-            --red: #ea4335;
-
-            --border: rgba(255, 255, 255, 0.10);
-
-            --shadow:
-                0 20px 60px rgba(0, 0, 0, 0.35);
-
-            --radius-lg: 24px;
-            --radius-md: 16px;
-            --radius-sm: 10px;
-
-            --max-width: 1180px;
-        }
-
-
-        /* =========================================================
-           RESET
-        ========================================================= */
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --accent: #06b6d4;
+            --text: #172033;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --background: #f8fafc;
+            --section: #f1f5f9;
+            --border: #e2e8f0;
+            --shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+            --shadow-hover: 0 20px 45px rgba(37, 99, 235, 0.15);
         }
 
         body {
             font-family: "Inter", sans-serif;
-            background:
-                radial-gradient(circle at 10% 10%, rgba(66, 133, 244, 0.12), transparent 30%),
-                radial-gradient(circle at 90% 20%, rgba(139, 92, 246, 0.12), transparent 30%),
-                radial-gradient(circle at 50% 90%, rgba(34, 211, 238, 0.07), transparent 30%),
-                var(--bg);
-
+            background: var(--background);
             color: var(--text);
             line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        body::selection {
-            background: rgba(66, 133, 244, 0.35);
-            color: white;
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
         img {
@@ -110,339 +84,124 @@
             display: block;
         }
 
-        button {
-            font-family: inherit;
-        }
-
-
-        /* =========================================================
-           BACKGROUND EFFECTS
-        ========================================================= */
-
-        .background {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: -1;
-        }
-
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.18;
-        }
-
-        .blob.one {
-            width: 350px;
-            height: 350px;
-            background: var(--blue);
-            top: -100px;
-            left: -120px;
-        }
-
-        .blob.two {
-            width: 400px;
-            height: 400px;
-            background: var(--purple);
-            right: -150px;
-            top: 300px;
-        }
-
-        .blob.three {
-            width: 300px;
-            height: 300px;
-            background: var(--cyan);
-            left: 35%;
-            bottom: -150px;
-        }
-
-
-        /* =========================================================
-           UTILITY
-        ========================================================= */
-
         .container {
-            width: min(var(--max-width), calc(100% - 40px));
+            width: min(1120px, 92%);
             margin: auto;
         }
 
-        .section {
-            padding: 110px 0;
-            position: relative;
-        }
-
-        .section-header {
-            max-width: 700px;
-            margin-bottom: 55px;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-
-            color: var(--blue-light);
-
-            margin-bottom: 16px;
-        }
-
-        .eyebrow::before {
-            content: "";
-            width: 28px;
-            height: 2px;
-            background: linear-gradient(
-                90deg,
-                var(--blue),
-                var(--purple)
-            );
-            border-radius: 20px;
-        }
-
-        .section-title {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-            margin-bottom: 16px;
-        }
-
-        .section-description {
-            color: var(--text-muted);
-            font-size: 16px;
-            max-width: 650px;
-        }
-
-
-        /* =========================================================
-           GOOGLE-INSPIRED ACCENT
-        ========================================================= */
-
-        .spectrum {
-            height: 4px;
-            width: 100%;
-            background: linear-gradient(
-                90deg,
-                var(--blue) 0%,
-                var(--blue) 25%,
-                var(--red) 25%,
-                var(--red) 50%,
-                var(--yellow) 50%,
-                var(--yellow) 75%,
-                var(--green) 75%,
-                var(--green) 100%
-            );
-        }
-
-
-        /* =========================================================
-           NAVBAR
-        ========================================================= */
+        /* NAVBAR */
 
         header {
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(226,232,240,0.8);
             z-index: 1000;
-
-            background: rgba(7, 17, 31, 0.78);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-
-            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        .nav {
-            height: 76px;
-
+        nav {
+            height: 75px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            font-family: "Space Grotesk", sans-serif;
-            font-weight: 700;
-            font-size: 19px;
-        }
-
-        .logo-mark {
-            width: 38px;
-            height: 38px;
-            border-radius: 11px;
-
-            display: grid;
-            place-items: center;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--blue),
-                    var(--purple)
-                );
-
-            box-shadow:
-                0 8px 25px rgba(66, 133, 244, 0.3);
-        }
-
-        .logo-mark span {
-            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            font-size: 1.35rem;
             font-weight: 800;
+            color: var(--text);
+        }
+
+        .logo span {
+            color: var(--primary);
         }
 
         .nav-links {
             display: flex;
-            align-items: center;
-            gap: 7px;
+            gap: 25px;
             list-style: none;
         }
 
         .nav-links a {
-            color: var(--text-muted);
-            font-size: 13px;
+            color: #475569;
+            font-size: 0.92rem;
             font-weight: 600;
-
-            padding: 9px 13px;
-            border-radius: 9px;
-
-            transition: 0.25s ease;
+            transition: 0.3s;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: white;
-            background: rgba(255, 255, 255, 0.06);
-        }
-
-        .nav-contact {
-            background: var(--blue) !important;
-            color: white !important;
-            padding: 10px 17px !important;
-        }
-
-        .nav-contact:hover {
-            background: #3478df !important;
-            transform: translateY(-1px);
+        .nav-links a:hover {
+            color: var(--primary);
         }
 
         .menu-btn {
             display: none;
-
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: white;
-
-            width: 42px;
-            height: 42px;
-            border-radius: 10px;
-
+            font-size: 1.5rem;
             cursor: pointer;
-            font-size: 18px;
+            color: var(--text);
         }
 
-
-        /* =========================================================
-           HERO
-        ========================================================= */
+        /* HERO */
 
         .hero {
             min-height: 100vh;
-            padding-top: 140px;
-            padding-bottom: 90px;
-
             display: flex;
             align-items: center;
+            padding: 130px 0 80px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(37,99,235,0.10), transparent 28%),
+                radial-gradient(circle at 10% 80%, rgba(124,58,237,0.08), transparent 30%),
+                #ffffff;
         }
 
-        .hero-grid {
+        .hero-content {
             display: grid;
-            grid-template-columns: 1.25fr 0.75fr;
-            gap: 80px;
+            grid-template-columns: 1.2fr 0.8fr;
             align-items: center;
+            gap: 70px;
         }
 
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-
-            padding: 8px 13px;
-
-            background: rgba(52, 168, 83, 0.08);
-            border: 1px solid rgba(52, 168, 83, 0.22);
-            border-radius: 999px;
-
-            color: #8ee6a7;
-
-            font-size: 12px;
+        .hero-text .small-title {
+            color: var(--primary);
             font-weight: 700;
-
-            margin-bottom: 24px;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
 
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--green);
-            border-radius: 50%;
-
-            box-shadow: 0 0 0 5px rgba(52, 168, 83, 0.10);
+        .hero-text h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
         }
 
-        .hero h1 {
-            font-family: "Space Grotesk", sans-serif;
-
-            font-size: clamp(3.3rem, 7vw, 6.5rem);
-            line-height: 0.98;
-
-            letter-spacing: -0.065em;
-
-            max-width: 850px;
-            margin-bottom: 26px;
+        .hero-text h1 span {
+            color: var(--primary);
         }
 
-        .gradient-text {
-            background: linear-gradient(
-                100deg,
-                #ffffff 0%,
-                #8bb9ff 45%,
-                #b18cff 100%
-            );
-
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .hero-text h2 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.35rem);
-            color: var(--text-soft);
-            max-width: 700px;
-            margin-bottom: 18px;
-        }
-
-        .hero-description {
-            color: var(--text-muted);
+        .hero-text p {
+            color: var(--text-light);
             max-width: 680px;
-            font-size: 15px;
-            margin-bottom: 35px;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
         }
 
         .hero-buttons {
             display: flex;
+            gap: 14px;
             flex-wrap: wrap;
-            gap: 13px;
         }
 
         .btn {
@@ -450,2385 +209,1192 @@
             align-items: center;
             justify-content: center;
             gap: 9px;
-
-            padding: 13px 20px;
-
-            border-radius: 11px;
-
-            font-size: 13px;
+            padding: 13px 22px;
+            border-radius: 10px;
             font-weight: 700;
-
-            transition: 0.25s ease;
-            border: 1px solid transparent;
+            transition: 0.3s;
         }
 
         .btn-primary {
-            background: var(--blue);
             color: white;
-
-            box-shadow:
-                0 10px 30px rgba(66, 133, 244, 0.22);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 10px 25px rgba(37,99,235,0.22);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow:
-                0 15px 35px rgba(66, 133, 244, 0.30);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37,99,235,0.30);
         }
 
-        .btn-secondary {
-            background: var(--surface);
-            border-color: var(--border);
-            color: var(--text-soft);
+        .btn-outline {
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--text);
         }
 
-        .btn-secondary:hover {
-            background: var(--surface-hover);
-            color: white;
-            transform: translateY(-2px);
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
         }
 
+        /* PROFILE */
 
-        /* =========================================================
-           HERO PHOTO
-        ========================================================= */
-
-        .hero-visual {
-            position: relative;
+        .profile-area {
             display: flex;
             justify-content: center;
         }
 
-        .photo-wrapper {
-            width: min(380px, 80vw);
-            aspect-ratio: 1 / 1;
-
-            padding: 10px;
-
-            border-radius: 32px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(66, 133, 244, 0.8),
-                    rgba(139, 92, 246, 0.7),
-                    rgba(34, 211, 238, 0.45)
-                );
-
-            box-shadow:
-                0 30px 80px rgba(0, 0, 0, 0.45);
-
-            transform: rotate(2deg);
-            transition: 0.4s ease;
+        .profile-card {
+            position: relative;
+            width: 330px;
+            height: 390px;
+            padding: 14px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #ffffff, #eef4ff);
+            box-shadow: var(--shadow-hover);
+            border: 1px solid #e5e7eb;
         }
 
-        .photo-wrapper:hover {
-            transform: rotate(0deg) translateY(-6px);
-        }
-
-        .photo-inner {
-            width: 100%;
-            height: 100%;
-
-            overflow: hidden;
-            border-radius: 25px;
-
-            background: #101c2d;
-
-            border: 4px solid #07111f;
-        }
-
-        .photo-inner img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            object-position: center;
-
-            transition: transform 0.5s ease;
-        }
-
-        .photo-wrapper:hover img {
-            transform: scale(1.03);
-        }
-
-        .floating-card {
+        .profile-card::before {
+            content: "";
             position: absolute;
+            width: 90px;
+            height: 90px;
+            background: rgba(37,99,235,0.12);
+            border-radius: 50%;
+            top: -25px;
+            right: -25px;
+        }
 
-            left: -30px;
-            bottom: 25px;
+        .profile-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 22px;
+        }
 
-            padding: 15px 18px;
+        /* SOCIAL */
 
-            background: rgba(10, 23, 40, 0.88);
-            border: 1px solid var(--border);
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
 
-            backdrop-filter: blur(14px);
-
-            border-radius: 15px;
-
-            box-shadow: var(--shadow);
-
+        .social-links a {
+            width: 43px;
+            height: 43px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            border-radius: 12px;
+            background: #f1f5f9;
+            color: #475569;
+            transition: 0.3s;
+            border: 1px solid var(--border);
         }
 
-        .floating-icon {
-            width: 40px;
-            height: 40px;
-
-            border-radius: 11px;
-
-            display: grid;
-            place-items: center;
-
-            background: rgba(66, 133, 244, 0.13);
-            color: var(--blue-light);
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
         }
 
-        .floating-card strong {
-            display: block;
-            font-size: 13px;
+        /* SECTIONS */
+
+        section {
+            padding: 100px 0;
         }
 
-        .floating-card small {
-            color: var(--text-muted);
-            font-size: 11px;
+        section:nth-child(even) {
+            background: var(--section);
         }
 
-
-        /* =========================================================
-           QUICK STATS
-        ========================================================= */
-
-        .stats {
-            margin-top: 80px;
-
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .stat {
-            padding: 25px 20px;
+        .section-heading {
             text-align: center;
-
-            border-right: 1px solid var(--border);
+            margin-bottom: 55px;
         }
 
-        .stat:last-child {
-            border-right: none;
+        .section-heading span {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .stat-number {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 24px;
-            font-weight: 700;
+        .section-heading h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 2.3rem;
+            margin: 8px 0 10px;
         }
 
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 11px;
-            margin-top: 3px;
+        .section-heading p {
+            color: var(--text-light);
+            max-width: 650px;
+            margin: auto;
         }
 
-
-        /* =========================================================
-           ABOUT
-        ========================================================= */
+        /* ABOUT */
 
         .about-grid {
             display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
-            gap: 70px;
-            align-items: start;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
-        .about-card {
-            padding: 32px;
-
-            background: var(--surface);
+        .info-card {
+            background: white;
             border: 1px solid var(--border);
-
-            border-radius: var(--radius-lg);
-
+            border-radius: 18px;
+            padding: 30px;
             box-shadow: var(--shadow);
         }
 
-        .about-card p {
-            color: var(--text-soft);
-            font-size: 15px;
-            margin-bottom: 18px;
+        .info-card h3 {
+            margin-bottom: 15px;
+            font-family: "Poppins", sans-serif;
         }
 
-        .about-card p:last-child {
-            margin-bottom: 0;
+        .info-card p {
+            color: var(--text-light);
         }
 
-        .about-highlight {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-            margin-top: 22px;
+        .info-list {
+            list-style: none;
+            margin-top: 18px;
         }
 
-        .highlight {
-            padding: 17px;
-
-            border-radius: 13px;
-
-            background: rgba(255, 255, 255, 0.035);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+        .info-list li {
+            padding: 9px 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
         }
 
-        .highlight i {
-            color: var(--blue-light);
-            margin-bottom: 9px;
+        .info-list strong {
+            color: var(--text);
         }
 
-        .highlight strong {
-            display: block;
-            font-size: 13px;
+        /* SKILLS */
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
         }
 
-        .highlight span {
-            display: block;
-            color: var(--text-muted);
-            font-size: 11px;
-            margin-top: 3px;
-        }
-
-
-        /* =========================================================
-           EDUCATION
-        ========================================================= */
-
-        .timeline {
-            position: relative;
-            max-width: 950px;
-        }
-
-        .timeline::before {
-            content: "";
-
-            position: absolute;
-            left: 18px;
-            top: 10px;
-            bottom: 10px;
-
-            width: 1px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    var(--blue),
-                    var(--purple),
-                    transparent
-                );
-        }
-
-        .timeline-item {
-            position: relative;
-
-            display: grid;
-            grid-template-columns: 55px 1fr;
-
-            margin-bottom: 35px;
-        }
-
-        .timeline-dot {
-            width: 37px;
-            height: 37px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 50%;
-
-            background: #0b1728;
-            border: 1px solid rgba(96, 165, 250, 0.5);
-
-            color: var(--blue-light);
-
-            z-index: 2;
-        }
-
-        .timeline-card {
-            padding: 25px 27px;
-
-            background: var(--surface);
+        .skill {
+            background: white;
             border: 1px solid var(--border);
-
-            border-radius: var(--radius-md);
-
-            transition: 0.25s ease;
+            padding: 10px 17px;
+            border-radius: 50px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: #334155;
+            box-shadow: 0 5px 15px rgba(15,23,42,0.04);
+            transition: 0.3s;
         }
 
-        .timeline-card:hover {
-            transform: translateX(5px);
-            background: var(--surface-hover);
+        .skill:hover {
+            color: var(--primary);
+            border-color: #bfdbfe;
+            transform: translateY(-3px);
         }
 
-        .timeline-card h3 {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 20px;
-            margin-bottom: 6px;
-        }
-
-        .timeline-card .institution {
-            color: var(--blue-light);
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .timeline-card p {
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
-
-        /* =========================================================
-           PROJECTS
-        ========================================================= */
+        /* PROJECTS */
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
+            gap: 25px;
         }
 
         .project-card {
-            position: relative;
-
+            background: white;
+            border-radius: 20px;
             padding: 30px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255, 255, 255, 0.065),
-                    rgba(255, 255, 255, 0.025)
-                );
-
             border: 1px solid var(--border);
-
-            border-radius: var(--radius-lg);
-
-            overflow: hidden;
-
-            transition: 0.3s ease;
-        }
-
-        .project-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 150px;
-            height: 150px;
-
-            border-radius: 50%;
-
-            background: var(--blue);
-            opacity: 0.06;
-
-            right: -70px;
-            top: -70px;
-
-            filter: blur(20px);
+            box-shadow: var(--shadow);
+            transition: 0.35s;
         }
 
         .project-card:hover {
             transform: translateY(-7px);
-            border-color: rgba(96, 165, 250, 0.3);
-
-            box-shadow:
-                0 25px 60px rgba(0, 0, 0, 0.28);
-        }
-
-        .project-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            margin-bottom: 22px;
+            box-shadow: var(--shadow-hover);
         }
 
         .project-icon {
-            width: 48px;
-            height: 48px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 14px;
-
-            background: rgba(66, 133, 244, 0.10);
-            border: 1px solid rgba(66, 133, 244, 0.17);
-
-            color: var(--blue-light);
-            font-size: 18px;
-        }
-
-        .project-number {
-            color: var(--text-muted);
-            font-size: 11px;
-            font-weight: 700;
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
         }
 
         .project-card h3 {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 23px;
-            margin-bottom: 11px;
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 10px;
         }
 
         .project-card p {
-            color: var(--text-muted);
-            font-size: 13px;
-            margin-bottom: 20px;
+            color: var(--text-light);
+            margin-bottom: 18px;
         }
 
-        .tech-list {
+        .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 7px;
-            list-style: none;
-            margin-bottom: 23px;
+            gap: 8px;
         }
 
-        .tech-list li {
-            padding: 5px 9px;
-
-            border-radius: 7px;
-
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-
-            color: var(--text-soft);
-
-            font-size: 10px;
-            font-weight: 600;
+        .tech-stack span {
+            padding: 5px 10px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            color: #475569;
         }
 
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
+        /* EDUCATION */
 
-            color: var(--blue-light);
-
-            font-size: 12px;
-            font-weight: 700;
-
-            transition: 0.2s ease;
+        .timeline {
+            max-width: 850px;
+            margin: auto;
         }
 
-        .project-link:hover {
-            color: white;
-            gap: 10px;
-        }
-
-
-        /* =========================================================
-           SKILLS
-        ========================================================= */
-
-        .skills-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
-        }
-
-        .skill-card {
-            padding: 28px;
-
-            background: var(--surface);
+        .timeline-item {
+            position: relative;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            background: white;
             border: 1px solid var(--border);
-
-            border-radius: var(--radius-lg);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
         }
 
-        .skill-card h3 {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 18px;
-
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            margin-bottom: 20px;
+        .timeline-item h3 {
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
         }
 
-        .skill-card h3 i {
-            color: var(--blue-light);
+        .timeline-item .date {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 700;
+            margin: 5px 0;
         }
 
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
+        .timeline-item p {
+            color: var(--text-light);
         }
 
-        .skill-tag {
-            padding: 8px 11px;
-
-            background: rgba(255, 255, 255, 0.045);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-
-            color: var(--text-soft);
-
-            border-radius: 9px;
-
-            font-size: 11px;
-            font-weight: 600;
-
-            transition: 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            color: white;
-            border-color: rgba(96, 165, 250, 0.35);
-            background: rgba(66, 133, 244, 0.08);
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================================================
-           CERTIFICATIONS
-        ========================================================= */
+        /* CERTIFICATIONS */
 
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
+            gap: 25px;
         }
 
         .cert-card {
-            padding: 27px;
-
-            background: var(--surface);
+            padding: 28px;
+            background: white;
             border: 1px solid var(--border);
-
-            border-radius: var(--radius-lg);
-
-            display: flex;
-            gap: 18px;
-
-            transition: 0.25s ease;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
         }
 
-        .cert-card:hover {
-            transform: translateY(-4px);
-            background: var(--surface-hover);
-        }
-
-        .cert-icon {
-            min-width: 52px;
-            height: 52px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 14px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(66, 133, 244, 0.14),
-                    rgba(139, 92, 246, 0.12)
-                );
-
-            color: var(--blue-light);
+        .cert-card i {
+            color: var(--primary);
+            font-size: 1.7rem;
+            margin-bottom: 15px;
         }
 
         .cert-card h3 {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 17px;
-            margin-bottom: 5px;
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 8px;
         }
 
         .cert-card p {
-            color: var(--text-muted);
-            font-size: 12px;
+            color: var(--text-light);
         }
 
-        .cert-label {
-            display: inline-block;
-            margin-top: 10px;
-
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-
-            color: var(--blue-light);
-        }
-
-
-        /* =========================================================
-           INTERESTS
-        ========================================================= */
-
-        .interest-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .interest {
-            min-height: 150px;
-
-            padding: 23px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            background: var(--surface);
-            border: 1px solid var(--border);
-
-            border-radius: var(--radius-md);
-
-            transition: 0.25s ease;
-        }
-
-        .interest:hover {
-            transform: translateY(-5px);
-
-            background: var(--surface-hover);
-
-            border-color: rgba(96, 165, 250, 0.28);
-        }
-
-        .interest i {
-            font-size: 22px;
-            color: var(--blue-light);
-        }
-
-        .interest strong {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 15px;
-        }
-
-
-        /* =========================================================
-           CONTACT
-        ========================================================= */
+        /* CONTACT */
 
         .contact-box {
-            position: relative;
-
-            padding: 55px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(66, 133, 244, 0.11),
-                    rgba(139, 92, 246, 0.08)
-                );
-
-            border: 1px solid rgba(96, 165, 250, 0.18);
-
-            border-radius: 30px;
-
-            overflow: hidden;
-        }
-
-        .contact-box::before {
-            content: "";
-
-            position: absolute;
-
-            width: 250px;
-            height: 250px;
-
-            right: -80px;
-            top: -120px;
-
-            border-radius: 50%;
-
-            background: rgba(66, 133, 244, 0.10);
-
-            filter: blur(30px);
-        }
-
-        .contact-grid {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 0.9fr;
-            gap: 60px;
-            align-items: center;
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: var(--shadow);
         }
 
         .contact-box h2 {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: clamp(2rem, 4vw, 3.3rem);
-
-            line-height: 1.05;
-
-            letter-spacing: -0.045em;
-
-            margin-bottom: 17px;
+            font-family: "Poppins", sans-serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
 
-        .contact-box p {
-            color: var(--text-muted);
-            max-width: 600px;
-            font-size: 14px;
+        .contact-box > p {
+            color: var(--text-light);
+            margin-bottom: 30px;
         }
 
         .contact-details {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 13px;
-
-            padding: 14px 16px;
-
+            gap: 9px;
+            padding: 11px 15px;
+            border-radius: 10px;
+            background: #f8fafc;
             border: 1px solid var(--border);
-            background: rgba(0, 0, 0, 0.12);
-
-            border-radius: 12px;
-
-            color: var(--text-soft);
-
-            font-size: 12px;
-
-            transition: 0.2s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
+            color: #475569;
         }
 
         .contact-item i {
-            width: 20px;
-            color: var(--blue-light);
+            color: var(--primary);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 35px 0;
             text-align: center;
         }
 
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            padding: 35px 0;
-
-            border-top: 1px solid var(--border);
-
-            color: var(--text-muted);
-
-            font-size: 11px;
-        }
-
-        .footer-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .socials {
-            display: flex;
-            gap: 8px;
-        }
-
-        .socials a {
-            width: 37px;
-            height: 37px;
-
-            display: grid;
-            place-items: center;
-
-            border: 1px solid var(--border);
-            border-radius: 9px;
-
-            color: var(--text-muted);
-
-            transition: 0.2s ease;
-        }
-
-        .socials a:hover {
+        footer h3 {
             color: white;
-            background: var(--surface);
-            border-color: rgba(96, 165, 250, 0.3);
-            transform: translateY(-2px);
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 8px;
         }
 
-
-        /* =========================================================
-           SCROLL REVEAL
-        ========================================================= */
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(25px);
-
-            transition:
-                opacity 0.7s ease,
-                transform 0.7s ease;
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 18px;
         }
 
-        .reveal.show {
-            opacity: 1;
-            transform: translateY(0);
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 18px;
         }
 
-
-        /* =========================================================
-           SCROLL BAR
-        ========================================================= */
-
-        ::-webkit-scrollbar {
-            width: 8px;
+        .footer-links a {
+            color: #cbd5e1;
+            transition: 0.3s;
         }
 
-        ::-webkit-scrollbar-track {
-            background: var(--bg);
+        .footer-links a:hover {
+            color: white;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: #26364e;
-            border-radius: 10px;
-        }
+        /* RESPONSIVE */
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3c5272;
-        }
-
-
-        /* =========================================================
-           RESPONSIVE - TABLET
-        ========================================================= */
-
-        @media (max-width: 1000px) {
+        @media (max-width: 850px) {
 
             .nav-links {
-                gap: 0;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                background: white;
+                padding: 25px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow);
             }
 
-            .nav-links a {
-                padding: 8px 8px;
-                font-size: 11px;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-
-            .hero-content {
-                text-align: center;
-            }
-
-            .hero-description {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-visual {
-                order: -1;
-            }
-
-            .photo-wrapper {
-                width: 310px;
-            }
-
-            .floating-card {
-                left: calc(50% - 190px);
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .interest-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-
-        /* =========================================================
-           RESPONSIVE - MOBILE
-        ========================================================= */
-
-        @media (max-width: 760px) {
-
-            .container {
-                width: min(100% - 28px, var(--max-width));
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
-            header {
-                background: rgba(7, 17, 31, 0.92);
-            }
-
-            .nav {
-                height: 68px;
+            .nav-links.active {
+                display: flex;
             }
 
             .menu-btn {
                 display: block;
             }
 
-            .nav-links {
-                position: absolute;
-
-                top: 68px;
-                left: 14px;
-                right: 14px;
-
-                padding: 12px;
-
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-
-                background: rgba(9, 21, 37, 0.97);
-
-                border: 1px solid var(--border);
-                border-radius: 15px;
-
-                box-shadow: var(--shadow);
-
-                backdrop-filter: blur(20px);
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
 
-            .nav-links.open {
-                display: flex;
+            .hero-buttons,
+            .social-links {
+                justify-content: center;
             }
 
-            .nav-links a {
-                display: block;
-                width: 100%;
+            .profile-area {
+                order: -1;
+            }
 
-                padding: 11px 13px;
+            .profile-card {
+                width: 280px;
+                height: 330px;
+            }
 
-                font-size: 13px;
+            .about-grid,
+            .projects-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 75px 0;
             }
 
             .hero {
-                padding-top: 120px;
+                padding-top: 110px;
             }
 
-            .hero h1 {
-                font-size: clamp(3rem, 15vw, 5rem);
+            .hero-text h1 {
+                font-size: 2.6rem;
             }
 
-            .hero-subtitle {
-                font-size: 17px;
+            .section-heading h2 {
+                font-size: 1.9rem;
             }
 
-            .hero-buttons {
-                flex-direction: column;
-                align-items: stretch;
+            .contact-box {
+                padding: 28px 20px;
             }
 
             .btn {
                 width: 100%;
             }
 
-            .photo-wrapper {
-                width: min(290px, 82vw);
-            }
-
-            .floating-card {
-                left: 50%;
-                transform: translateX(-50%);
-                white-space: nowrap;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stat {
-                border-bottom: 1px solid var(--border);
-            }
-
-            .stat:nth-child(2) {
-                border-right: none;
-            }
-
-            .stat:nth-child(3),
-            .stat:nth-child(4) {
-                border-bottom: none;
-            }
-
-            .projects-grid,
-            .skills-layout,
-            .cert-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-box {
-                padding: 30px 22px;
-            }
-
-            .interest-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-inner {
+            .hero-buttons {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            .about-highlight {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-        /* =========================================================
-           SMALL MOBILE
-        ========================================================= */
-
-        @media (max-width: 450px) {
-
-            .logo {
-                font-size: 16px;
-            }
-
-            .logo-mark {
-                width: 34px;
-                height: 34px;
-            }
-
-            .hero h1 {
-                font-size: 2.9rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .projects-grid,
-            .cert-grid {
-                gap: 15px;
-            }
-
-            .project-card,
-            .skill-card,
-            .about-card {
-                padding: 22px;
-            }
-
-            .interest-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-box h2 {
-                font-size: 2.2rem;
-            }
-
-            .floating-card {
-                bottom: 10px;
-                padding: 11px 13px;
-            }
-
-            .floating-icon {
-                width: 34px;
-                height: 34px;
             }
         }
 
     </style>
 </head>
 
-
 <body>
 
-    <!-- =========================================================
-         BACKGROUND
-    ========================================================= -->
-
-    <div class="background">
-        <div class="blob one"></div>
-        <div class="blob two"></div>
-        <div class="blob three"></div>
-    </div>
-
-
-    <!-- =========================================================
-         NAVIGATION
-    ========================================================= -->
+    <!-- NAVIGATION -->
 
     <header>
+        <div class="container">
+            <nav>
 
-        <div class="spectrum"></div>
+                <a href="#home" class="logo">
+                    Syed <span>Kifayat</span>
+                </a>
 
-        <div class="container nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
 
-            <a href="#home" class="logo">
-
-                <div class="logo-mark">
-                    <span>SK</span>
+                <div class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
                 </div>
 
-                <span>Syed Kifayat</span>
-
-            </a>
-
-
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
-
-                <i class="fa-solid fa-bars"></i>
-
-            </button>
-
-
-            <ul class="nav-links" id="navLinks">
-
-                <li>
-                    <a href="#home" class="active">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#certifications">Certificates</a>
-                </li>
-
-                <li>
-                    <a href="#interests">Interests</a>
-                </li>
-
-                <li>
-                    <a href="#contact" class="nav-contact">Contact</a>
-                </li>
-
-            </ul>
-
+            </nav>
         </div>
-
     </header>
 
 
+    <!-- HERO -->
 
-    <main>
+    <section class="hero" id="home">
 
-        <!-- =====================================================
-             HERO
-        ===================================================== -->
+        <div class="container">
 
-        <section class="hero" id="home">
+            <div class="hero-content">
 
-            <div class="container">
+                <div class="hero-text">
 
-                <div class="hero-grid">
-
-                    <div class="hero-content reveal">
-
-                        <div class="status">
-                            <span class="status-dot"></span>
-                            Open to Software & Technology Opportunities
-                        </div>
-
-
-                        <h1>
-                            Syed Kifayat
-                            <span class="gradient-text">Ullah</span>
-                        </h1>
-
-
-                        <p class="hero-subtitle">
-                            Software Developer · MCA Graduate · Data & Technology Enthusiast
-                        </p>
-
-
-                        <p class="hero-description">
-                            MCA graduate with a strong foundation in software development,
-                            databases, programming, data analysis and modern web technologies.
-                            I enjoy building practical digital solutions and continuously
-                            expanding my technical skills.
-                        </p>
-
-
-                        <div class="hero-buttons">
-
-                            <a href="resume.pdf"
-                               class="btn btn-primary"
-                               target="_blank">
-
-                                <i class="fa-solid fa-file-arrow-down"></i>
-                                View Resume
-
-                            </a>
-
-
-                            <a href="https://github.com/syedkifayatullah"
-                               class="btn btn-secondary"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                <i class="fa-brands fa-github"></i>
-                                GitHub
-
-                            </a>
-
-
-                            <a href="https://www.linkedin.com/in/syed-kifayat-200b0b342"
-                               class="btn btn-secondary"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                <i class="fa-brands fa-linkedin"></i>
-                                LinkedIn
-
-                            </a>
-
-                        </div>
-
+                    <div class="small-title">
+                        HELLO, I'M
                     </div>
 
+                    <h1>
+                        Syed <span>Kifayat Ullah</span>
+                    </h1>
 
-
-                    <div class="hero-visual reveal">
-
-                        <div class="photo-wrapper">
-
-                            <div class="photo-inner">
-
-                                <!--
-                                    IMPORTANT:
-                                    Keep your photo named "photo.jpg"
-                                    in the same folder as this index.html file.
-                                -->
-
-                                <img
-                                    src="photo.jpg"
-                                    alt="Syed Kifayat Ullah - Software Developer">
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="floating-card">
-
-                            <div class="floating-icon">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-
-                            <div>
-                                <strong>MCA Graduate</strong>
-                                <small>Software & Technology</small>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- QUICK STATS -->
-
-                <div class="stats reveal">
-
-                    <div class="stat">
-                        <div class="stat-number">MCA</div>
-                        <div class="stat-label">Postgraduate Degree</div>
-                    </div>
-
-                    <div class="stat">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Programming & Tech Skills</div>
-                    </div>
-
-                    <div class="stat">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Major Projects</div>
-                    </div>
-
-                    <div class="stat">
-                        <div class="stat-number">J&K</div>
-                        <div class="stat-label">India</div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             ABOUT
-        ===================================================== -->
-
-        <section class="section" id="about">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="eyebrow">
-                        About Me
-                    </div>
-
-                    <h2 class="section-title">
-                        Technology with a practical mindset.
+                    <h2>
+                        Software Developer · MCA Graduate · Data & Technology Enthusiast
                     </h2>
 
-                    <p class="section-description">
-                        A multidisciplinary background combining computer applications,
-                        software development, data analysis and biological science.
+                    <p>
+                        I am an MCA graduate passionate about software development,
+                        data analysis, emerging technologies and building meaningful
+                        digital solutions. I enjoy learning, creating and exploring
+                        technology to solve real-world problems.
                     </p>
 
-                </div>
-
-
-                <div class="about-grid">
-
-                    <div class="about-card reveal">
-
-                        <p>
-                            I am <strong>Syed Kifayat Ullah</strong>, an MCA graduate
-                            from Cluster University Srinagar with an interest in
-                            software development, artificial intelligence, data analysis
-                            and emerging technologies.
-                        </p>
-
-                        <p>
-                            My technical background includes programming languages,
-                            database systems, web development and software engineering.
-                            I also have experience working with scientific data,
-                            research methods, GIS and remote sensing.
-                        </p>
-
-                        <p>
-                            I believe in learning continuously, solving problems
-                            logically and creating technology that is useful,
-                            reliable and easy to understand.
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="about-highlight reveal">
-
-                        <div class="highlight">
-                            <i class="fa-solid fa-code"></i>
-                            <strong>Software Development</strong>
-                            <span>Web applications & programming</span>
-                        </div>
-
-
-                        <div class="highlight">
-                            <i class="fa-solid fa-database"></i>
-                            <strong>Data & Databases</strong>
-                            <span>SQL, analysis & data management</span>
-                        </div>
-
-
-                        <div class="highlight">
-                            <i class="fa-solid fa-brain"></i>
-                            <strong>AI Fundamentals</strong>
-                            <span>Exploring intelligent technologies</span>
-                        </div>
-
-
-                        <div class="highlight">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <strong>Data Analysis</strong>
-                            <span>Scientific & structured analysis</span>
-                        </div>
-
-
-                        <div class="highlight">
-                            <i class="fa-solid fa-network-wired"></i>
-                            <strong>Computer Networks</strong>
-                            <span>Networking fundamentals</span>
-                        </div>
-
-
-                        <div class="highlight">
-                            <i class="fa-solid fa-flask"></i>
-                            <strong>Bio-Science</strong>
-                            <span>Scientific & biological background</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             EDUCATION
-        ===================================================== -->
-
-        <section class="section" id="education">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="eyebrow">
-                        Education
-                    </div>
-
-                    <h2 class="section-title">
-                        Academic foundation.
-                    </h2>
-
-                    <p class="section-description">
-                        Education combining computer applications with a
-                        scientific background.
-                    </p>
-
-                </div>
-
-
-
-                <div class="timeline">
-
-                    <div class="timeline-item reveal">
-
-                        <div class="timeline-dot">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-
-
-                        <div class="timeline-card">
-
-                            <h3>
-                                Master of Computer Applications (MCA)
-                            </h3>
-
-                            <div class="institution">
-                                Cluster University Srinagar
-                            </div>
-
-                            <p>
-                                Computer Applications · Software Development ·
-                                Databases · Programming · Web Technologies
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="timeline-item reveal">
-
-                        <div class="timeline-dot">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-
-
-                        <div class="timeline-card">
-
-                            <h3>
-                                Bachelor's Degree in Bio-Science
-                            </h3>
-
-                            <div class="institution">
-                                University of Kashmir
-                            </div>
-
-                            <p>
-                                Scientific foundation with knowledge of biological
-                                sciences, research and analytical thinking.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             PROJECTS
-        ===================================================== -->
-
-        <section class="section" id="projects">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="eyebrow">
-                        Projects
-                    </div>
-
-                    <h2 class="section-title">
-                        Things I have built.
-                    </h2>
-
-                    <p class="section-description">
-                        Practical projects demonstrating software development,
-                        database design and analytical skills.
-                    </p>
-
-                </div>
-
-
-
-                <div class="projects-grid">
-
-
-                    <!-- PROJECT 01 -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-top">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-
-                            <span class="project-number">
-                                PROJECT 01
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Trainora
-                        </h3>
-
-
-                        <p>
-                            Smart Learning Management System designed to support
-                            digital learning, course management, student interaction
-                            and academic content organization.
-                        </p>
-
-
-                        <ul class="tech-list">
-
-                            <li>ASP.NET 8</li>
-                            <li>C#</li>
-                            <li>Entity Framework</li>
-                            <li>JavaScript</li>
-                            <li>Bootstrap</li>
-                            <li>SQL Server</li>
-
-                        </ul>
-
-
-                        <a href="https://github.com/syedkifayatullah"
-                           class="project-link"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            View GitHub
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View My Work
                         </a>
 
-                    </article>
-
-
-
-                    <!-- PROJECT 02 -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-top">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-chart-column"></i>
-                            </div>
-
-                            <span class="project-number">
-                                PROJECT 02
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Data & Scientific Analysis
-                        </h3>
-
-
-                        <p>
-                            Analytical work focused on organizing, cleaning,
-                            interpreting and presenting structured scientific
-                            and research-oriented data.
-                        </p>
-
-
-                        <ul class="tech-list">
-
-                            <li>Python</li>
-                            <li>Data Cleaning</li>
-                            <li>Data Analysis</li>
-                            <li>Research Methods</li>
-                            <li>GIS</li>
-                            <li>Remote Sensing</li>
-
-                        </ul>
-
-
-                        <a href="https://github.com/syedkifayatullah"
-                           class="project-link"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            View GitHub
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
+                        <a href="resume.pdf" class="btn btn-outline" target="_blank">
+                            <i class="fas fa-file-arrow-down"></i>
+                            View Resume
                         </a>
 
-                    </article>
+                    </div>
+
+                    <div class="social-links">
+
+                        <a href="https://github.com/syedkifayatullah"
+                            target="_blank"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/syed-kifayat-200b0b342"
+                            target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="mailto:syedathar792@gmail.com"
+                            aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-area">
+
+                    <div class="profile-card">
+
+                        <img src="photo.jpg"
+                            alt="Syed Kifayat Ullah - Software Developer">
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
+    <!-- ABOUT -->
 
-        <!-- =====================================================
-             SKILLS
-        ===================================================== -->
+    <section id="about">
 
-        <section class="section" id="skills">
+        <div class="container">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-header reveal">
+                <span>About Me</span>
 
-                    <div class="eyebrow">
-                        Technical Skills
-                    </div>
+                <h2>Who I Am</h2>
 
-                    <h2 class="section-title">
-                        A versatile technical toolkit.
-                    </h2>
+                <p>
+                    A technology enthusiast focused on software, data and continuous learning.
+                </p>
 
-                    <p class="section-description">
-                        Technologies and tools I have studied, practiced or worked with.
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="info-card">
+
+                    <h3>Professional Profile</h3>
+
+                    <p>
+                        I am an MCA graduate with an interest in software development,
+                        data analysis, artificial intelligence and emerging technologies.
+                        My academic background and practical experience have helped me
+                        develop problem-solving, communication and technical skills.
+                    </p>
+
+                    <p style="margin-top:15px;">
+                        I believe technology becomes meaningful when it is used to
+                        create useful solutions, simplify processes and make a positive
+                        difference.
                     </p>
 
                 </div>
 
 
+                <div class="info-card">
 
-                <div class="skills-layout">
+                    <h3>Quick Information</h3>
 
+                    <ul class="info-list">
 
-                    <!-- PROGRAMMING -->
+                        <li>
+                            <strong>Education:</strong> Master of Computer Applications (MCA)
+                        </li>
 
-                    <div class="skill-card reveal">
+                        <li>
+                            <strong>Field:</strong> Computer Applications & Technology
+                        </li>
 
-                        <h3>
-                            <i class="fa-solid fa-code"></i>
-                            Programming
-                        </h3>
+                        <li>
+                            <strong>Focus:</strong> Software Development & Data Analysis
+                        </li>
 
+                        <li>
+                            <strong>Location:</strong> Jammu & Kashmir, India
+                        </li>
 
-                        <div class="skill-tags">
+                        <li>
+                            <strong>Email:</strong>
+                            syedathar792@gmail.com
+                        </li>
 
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">JavaScript</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- WEB -->
-
-                    <div class="skill-card reveal">
-
-                        <h3>
-                            <i class="fa-solid fa-globe"></i>
-                            Web Development
-                        </h3>
-
-
-                        <div class="skill-tags">
-
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">ASP.NET</span>
-                            <span class="skill-tag">Bootstrap</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- DATABASE -->
-
-                    <div class="skill-card reveal">
-
-                        <h3>
-                            <i class="fa-solid fa-database"></i>
-                            Database & Data
-                        </h3>
-
-
-                        <div class="skill-tags">
-
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">SQL Server</span>
-                            <span class="skill-tag">Database Design</span>
-                            <span class="skill-tag">Data Cleaning</span>
-                            <span class="skill-tag">Data Analysis</span>
-                            <span class="skill-tag">Entity Framework</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- TOOLS -->
-
-                    <div class="skill-card reveal">
-
-                        <h3>
-                            <i class="fa-solid fa-toolbox"></i>
-                            Tools & Platforms
-                        </h3>
-
-
-                        <div class="skill-tags">
-
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">Windows</span>
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">MS Excel</span>
-                            <span class="skill-tag">MS Word</span>
-                            <span class="skill-tag">MS PowerPoint</span>
-                            <span class="skill-tag">Tally</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- SCIENTIFIC -->
-
-                    <div class="skill-card reveal">
-
-                        <h3>
-                            <i class="fa-solid fa-flask"></i>
-                            Scientific & Research
-                        </h3>
-
-
-                        <div class="skill-tags">
-
-                            <span class="skill-tag">Research Methods</span>
-                            <span class="skill-tag">GIS</span>
-                            <span class="skill-tag">Remote Sensing</span>
-                            <span class="skill-tag">Scientific Analysis</span>
-                            <span class="skill-tag">Technical Writing</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- EMERGING TECH -->
-
-                    <div class="skill-card reveal">
-
-                        <h3>
-                            <i class="fa-solid fa-microchip"></i>
-                            Emerging Technology
-                        </h3>
-
-
-                        <div class="skill-tags">
-
-                            <span class="skill-tag">AI Fundamentals</span>
-                            <span class="skill-tag">Blockchain</span>
-                            <span class="skill-tag">Digital Currency</span>
-                            <span class="skill-tag">Drone Technology</span>
-
-                        </div>
-
-                    </div>
+                    </ul>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
+    <!-- SKILLS -->
 
-        <!-- =====================================================
-             CERTIFICATIONS
-        ===================================================== -->
+    <section id="skills">
 
-        <section class="section" id="certifications">
+        <div class="container">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-header reveal">
+                <span>Technical Expertise</span>
 
-                    <div class="eyebrow">
-                        Certifications & Training
+                <h2>My Skills</h2>
+
+                <p>
+                    Technologies and areas I have studied, practiced and worked with.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">C</div>
+                <div class="skill">C++</div>
+                <div class="skill">C#</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">ASP.NET</div>
+                <div class="skill">Bootstrap</div>
+                <div class="skill">SQL</div>
+                <div class="skill">SQL Server</div>
+                <div class="skill">Entity Framework</div>
+                <div class="skill">Database Design</div>
+                <div class="skill">Data Cleaning</div>
+                <div class="skill">Data Analysis</div>
+                <div class="skill">Git</div>
+                <div class="skill">GitHub</div>
+                <div class="skill">Windows</div>
+                <div class="skill">Linux</div>
+                <div class="skill">MS Office</div>
+                <div class="skill">Tally</div>
+                <div class="skill">Research Methods</div>
+                <div class="skill">GIS</div>
+                <div class="skill">Remote Sensing</div>
+                <div class="skill">Scientific Analysis</div>
+                <div class="skill">Technical Writing</div>
+                <div class="skill">AI Fundamentals</div>
+                <div class="skill">Blockchain</div>
+                <div class="skill">Digital Currency</div>
+                <div class="skill">Drone Technology</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>My Work</span>
+
+                <h2>Featured Projects</h2>
+
+                <p>
+                    Selected academic and technical projects.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
 
-                    <h2 class="section-title">
-                        Always learning beyond the classroom.
-                    </h2>
+                    <h3>
+                        Trainora – Smart Learning Management System
+                    </h3>
 
-                    <p class="section-description">
-                        Additional exposure to emerging technologies and
-                        practical digital skills.
+                    <p>
+                        A smart Learning Management System developed to provide
+                        an organized digital platform for managing learning,
+                        educational content and academic activities.
+                    </p>
+
+                    <div class="tech-stack">
+
+                        <span>ASP.NET 8.0</span>
+                        <span>C#</span>
+                        <span>Entity Framework</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                        <span>SQL Server</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+
+                    <h3>
+                        Data & Scientific Analysis
+                    </h3>
+
+                    <p>
+                        A collection of analytical and research-oriented work
+                        involving data processing, analysis, visualization and
+                        technology-assisted scientific problem solving.
+                    </p>
+
+                    <div class="tech-stack">
+
+                        <span>Python</span>
+                        <span>Data Analysis</span>
+                        <span>Research</span>
+                        <span>Scientific Analysis</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Academic Journey</span>
+
+                <h2>Education</h2>
+
+                <p>
+                    My academic background in computer applications and technology.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <h3>
+                        Master of Computer Applications (MCA)
+                    </h3>
+
+                    <div class="date">
+                        Computer Applications
+                    </div>
+
+                    <p>
+                        Cluster University, Srinagar
+                    </p>
+
+                    <p>
+                        Department of Computer Applications
                     </p>
 
                 </div>
 
 
+                <div class="timeline-item">
 
-                <div class="cert-grid">
+                    <h3>
+                        Technology & Professional Learning
+                    </h3>
+
+                    <div class="date">
+                        Continuous Learning
+                    </div>
+
+                    <p>
+                        Exploring software development, artificial intelligence,
+                        data analysis, emerging technologies and practical
+                        technology applications.
+                    </p>
+
+                </div>
 
 
-                    <div class="cert-card reveal">
+            </div>
 
-                        <div class="cert-icon">
-                            <i class="fa-solid fa-coins"></i>
-                        </div>
+        </div>
 
-                        <div>
+    </section>
 
-                            <h3>
-                                Digital Currency & Blockchain
-                            </h3>
 
-                            <p>
-                                Training and exposure to blockchain concepts,
-                                digital currency and emerging financial technologies.
-                            </p>
+    <!-- CERTIFICATIONS -->
 
-                            <span class="cert-label">
-                                Training
-                            </span>
+    <section id="certifications">
 
-                        </div>
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Learning & Training</span>
+
+                <h2>Certifications & Training</h2>
+
+                <p>
+                    Additional areas of technical learning and exposure.
+                </p>
+
+            </div>
+
+
+            <div class="cert-grid">
+
+
+                <div class="cert-card">
+
+                    <i class="fas fa-coins"></i>
+
+                    <h3>
+                        Digital Currency & Blockchain
+                    </h3>
+
+                    <p>
+                        Training and workshop exposure to digital currency,
+                        blockchain concepts and emerging financial technologies.
+                    </p>
+
+                </div>
+
+
+                <div class="cert-card">
+
+                    <i class="fas fa-drone"></i>
+
+                    <h3>
+                        Drone Technology Fundamentals
+                    </h3>
+
+                    <p>
+                        Learning and workshop exposure to drone technology,
+                        applications and emerging technological systems.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERESTS -->
+
+    <section id="interests">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>What Drives Me</span>
+
+                <h2>Interests</h2>
+
+                <p>
+                    Areas of technology and knowledge that I enjoy exploring.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill">
+                    <i class="fas fa-laptop-code"></i>
+                    Software Development
+                </div>
+
+                <div class="skill">
+                    <i class="fas fa-robot"></i>
+                    Artificial Intelligence
+                </div>
+
+                <div class="skill">
+                    <i class="fas fa-chart-pie"></i>
+                    Data Analysis
+                </div>
+
+                <div class="skill">
+                    <i class="fas fa-dna"></i>
+                    Biological Science
+                </div>
+
+                <div class="skill">
+                    <i class="fas fa-lightbulb"></i>
+                    Emerging Technology
+                </div>
+
+                <div class="skill">
+                    <i class="fas fa-magnifying-glass-chart"></i>
+                    Research
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Get In Touch</span>
+
+                <h2>Let's Connect</h2>
+
+                <p>
+                    Feel free to connect with me for professional opportunities,
+                    collaboration and technology-related discussions.
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <h2>
+                    Syed Kifayat Ullah
+                </h2>
+
+                <p>
+                    Software Developer · MCA Graduate · Technology Enthusiast
+                </p>
+
+
+                <div class="contact-details">
+
+                    <a class="contact-item"
+                        href="mailto:syedathar792@gmail.com">
+
+                        <i class="fas fa-envelope"></i>
+
+                        syedathar792@gmail.com
+
+                    </a>
+
+
+                    <div class="contact-item">
+
+                        <i class="fas fa-location-dot"></i>
+
+                        Jammu & Kashmir, India
 
                     </div>
 
 
+                    <a class="contact-item"
+                        href="https://github.com/syedkifayatullah"
+                        target="_blank">
 
-                    <div class="cert-card reveal">
+                        <i class="fab fa-github"></i>
 
-                        <div class="cert-icon">
-                            <i class="fa-solid fa-drone"></i>
-                        </div>
+                        GitHub
 
-                        <div>
+                    </a>
 
-                            <h3>
-                                Drone Technology Fundamentals
-                            </h3>
 
-                            <p>
-                                Training covering fundamentals of drone technology
-                                and its applications.
-                            </p>
+                    <a class="contact-item"
+                        href="https://www.linkedin.com/in/syed-kifayat-200b0b342"
+                        target="_blank">
 
-                            <span class="cert-label">
-                                Training
-                            </span>
+                        <i class="fab fa-linkedin"></i>
 
-                        </div>
+                        LinkedIn
 
-                    </div>
+                    </a>
+
+                </div>
+
+
+                <div class="hero-buttons"
+                    style="justify-content:center; margin-top:30px;">
+
+                    <a href="mailto:syedathar792@gmail.com"
+                        class="btn btn-primary">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Contact Me
+
+                    </a>
+
+                    <a href="resume.pdf"
+                        target="_blank"
+                        class="btn btn-outline">
+
+                        <i class="fas fa-file-pdf"></i>
+
+                        View Resume
+
+                    </a>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
+    </section>
 
 
-        <!-- =====================================================
-             INTERESTS
-        ===================================================== -->
-
-        <section class="section" id="interests">
-
-            <div class="container">
-
-                <div class="section-header reveal">
-
-                    <div class="eyebrow">
-                        Interests
-                    </div>
-
-                    <h2 class="section-title">
-                        What keeps me curious.
-                    </h2>
-
-                </div>
-
-
-
-                <div class="interest-grid">
-
-
-                    <div class="interest reveal">
-
-                        <i class="fa-solid fa-laptop-code"></i>
-
-                        <strong>
-                            Software Development
-                        </strong>
-
-                    </div>
-
-
-                    <div class="interest reveal">
-
-                        <i class="fa-solid fa-brain"></i>
-
-                        <strong>
-                            Artificial Intelligence
-                        </strong>
-
-                    </div>
-
-
-                    <div class="interest reveal">
-
-                        <i class="fa-solid fa-chart-line"></i>
-
-                        <strong>
-                            Data Analysis
-                        </strong>
-
-                    </div>
-
-
-                    <div class="interest reveal">
-
-                        <i class="fa-solid fa-dna"></i>
-
-                        <strong>
-                            Biological Science
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             CONTACT
-        ===================================================== -->
-
-        <section class="section" id="contact">
-
-            <div class="container">
-
-                <div class="contact-box reveal">
-
-                    <div class="contact-grid">
-
-
-                        <div>
-
-                            <div class="eyebrow">
-                                Get In Touch
-                            </div>
-
-
-                            <h2>
-                                Let's build something useful.
-                            </h2>
-
-
-                            <p>
-                                I am interested in software development,
-                                technology, data and opportunities where I can
-                                learn, contribute and grow professionally.
-                            </p>
-
-
-                            <div class="hero-buttons" style="margin-top: 25px;">
-
-                                <a href="mailto:syedathar792@gmail.com"
-                                   class="btn btn-primary">
-
-                                    <i class="fa-solid fa-envelope"></i>
-                                    Email Me
-
-                                </a>
-
-
-                                <a href="https://www.linkedin.com/in/syed-kifayat-200b0b342"
-                                   class="btn btn-secondary"
-                                   target="_blank"
-                                   rel="noopener noreferrer">
-
-                                    <i class="fa-brands fa-linkedin"></i>
-                                    Connect on LinkedIn
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="contact-details">
-
-
-                            <a href="mailto:syedathar792@gmail.com"
-                               class="contact-item">
-
-                                <i class="fa-solid fa-envelope"></i>
-
-                                <span>
-                                    syedathar792@gmail.com
-                                </span>
-
-                            </a>
-
-
-                            <a href="https://www.linkedin.com/in/syed-kifayat-200b0b342"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="contact-item">
-
-                                <i class="fa-brands fa-linkedin"></i>
-
-                                <span>
-                                    linkedin.com/in/syed-kifayat-200b0b342
-                                </span>
-
-                            </a>
-
-
-                            <a href="https://github.com/syedkifayatullah"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="contact-item">
-
-                                <i class="fa-brands fa-github"></i>
-
-                                <span>
-                                    github.com/syedkifayatullah
-                                </span>
-
-                            </a>
-
-
-                            <div class="contact-item">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
-                                <span>
-                                    Jammu & Kashmir, India
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
+    <!-- FOOTER -->
 
     <footer>
 
-        <div class="container footer-inner">
+        <div class="container">
 
-            <div>
-                © <span id="year"></span> Syed Kifayat Ullah.
-                All rights reserved.
-            </div>
+            <h3>
+                Syed Kifayat Ullah
+            </h3>
 
-
-            <div class="socials">
-
-                <a
-                    href="https://github.com/syedkifayatullah"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub">
-
-                    <i class="fa-brands fa-github"></i>
-
-                </a>
+            <p>
+                Software Developer · MCA Graduate · Data & Technology Enthusiast
+            </p>
 
 
-                <a
-                    href="https://www.linkedin.com/in/syed-kifayat-200b0b342"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn">
+            <div class="footer-links">
 
-                    <i class="fa-brands fa-linkedin"></i>
-
-                </a>
-
-
-                <a
-                    href="mailto:syedathar792@gmail.com"
-                    aria-label="Email">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                </a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
 
             </div>
+
+
+            <p>
+                © <span id="year"></span> Syed Kifayat Ullah. All Rights Reserved.
+            </p>
 
         </div>
 
     </footer>
 
 
-
-    <!-- =========================================================
-         JAVASCRIPT
-    ========================================================= -->
+    <!-- JAVASCRIPT -->
 
     <script>
-
-        /* =====================================================
-           MOBILE MENU
-        ===================================================== */
 
         const menuBtn = document.getElementById("menuBtn");
         const navLinks = document.getElementById("navLinks");
 
         menuBtn.addEventListener("click", function () {
 
-            navLinks.classList.toggle("open");
-
-            const isOpen = navLinks.classList.contains("open");
-
-            menuBtn.setAttribute("aria-expanded", isOpen);
-
-            menuBtn.innerHTML = isOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
+            navLinks.classList.toggle("active");
 
         });
 
-
-
-        /* =====================================================
-           CLOSE MOBILE MENU AFTER CLICKING LINK
-        ===================================================== */
 
         document.querySelectorAll(".nav-links a").forEach(function (link) {
 
             link.addEventListener("click", function () {
 
-                navLinks.classList.remove("open");
-
-                menuBtn.setAttribute("aria-expanded", "false");
-
-                menuBtn.innerHTML =
-                    '<i class="fa-solid fa-bars"></i>';
+                navLinks.classList.remove("active");
 
             });
 
         });
 
 
-
-        /* =====================================================
-           SCROLL REVEAL
-        ===================================================== */
-
-        const revealElements =
-            document.querySelectorAll(".reveal");
-
-        const revealObserver =
-            new IntersectionObserver(
-
-                function (entries) {
-
-                    entries.forEach(function (entry) {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add("show");
-
-                            revealObserver.unobserve(entry.target);
-
-                        }
-
-                    });
-
-                },
-
-                {
-                    threshold: 0.12
-                }
-
-            );
-
-
-        revealElements.forEach(function (element) {
-
-            revealObserver.observe(element);
-
-        });
-
-
-
-        /* =====================================================
-           ACTIVE NAVIGATION
-        ===================================================== */
-
-        const sections =
-            document.querySelectorAll("main section[id]");
-
-        const navigationLinks =
-            document.querySelectorAll(".nav-links a");
-
-
-        const navObserver =
-            new IntersectionObserver(
-
-                function (entries) {
-
-                    entries.forEach(function (entry) {
-
-                        if (entry.isIntersecting) {
-
-                            navigationLinks.forEach(function (link) {
-
-                                link.classList.remove("active");
-
-                                if (
-                                    link.getAttribute("href") ===
-                                    "#" + entry.target.id
-                                ) {
-
-                                    link.classList.add("active");
-
-                                }
-
-                            });
-
-                        }
-
-                    });
-
-                },
-
-                {
-                    rootMargin: "-35% 0px -55% 0px"
-                }
-
-            );
-
-
-        sections.forEach(function (section) {
-
-            navObserver.observe(section);
-
-        });
-
-
-
-        /* =====================================================
-           CURRENT YEAR
-        ===================================================== */
-
         document.getElementById("year").textContent =
             new Date().getFullYear();
-
-
-
-        /* =====================================================
-           CONSOLE MESSAGE
-        ===================================================== */
-
-        console.log(
-            "Welcome to Syed Kifayat Ullah's portfolio."
-        );
 
     </script>
 
